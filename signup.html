@@ -1,0 +1,129 @@
+
+<html>
+
+<head>
+	<title>Sign Up Form</title>
+	<link rel="stylesheet" href="new1.css">
+</head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="row" id="content-box">
+			<div class="col-lg-4 col-md-6 col-sm-12 card">
+				<h2>Amader Chat App</h2>
+				<div id="ui">
+					<form class="form-group" onsubmit ="event.preventDefault(); check();">
+						<div class="row">
+							<div class="col-lg-6">
+								<!-- <strong><label>First name:</label></strong> -->
+								<input type="text" class="input-box" name="fname" placeholder="First Name">
+
+							</div>
+
+							<div class="col-lg-6">
+								<!-- <strong><label>Last name:</label></strong> -->
+								<input type="text" class="input-box" name="lname" placeholder="Last Name">
+
+							</div>
+						</div>
+						<!-- <strong><label>Email</label></strong> -->
+						<div class="row">
+							<div class="col-lg-12">
+								<input type="email" class="input-box" name="email" placeholder="Enter your e-mail">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-6">
+								<!-- <strong><label>Password</label></strong> -->
+								<input type="password" class="input-box pass" name="pass" placeholder="Password">
+
+							</div>
+
+							<div class="col-lg-6">
+								<!-- <strong><label>Confirm password:</label></strong> -->
+								<input type="password" class="input-box cpass" name="cpass" placeholder="Confirm Password">
+
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-7">
+								<label for="avatar" class="custom-file-upload"><strong>Choose a profile picture:</strong>
+
+									<input class="" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg, image/jpg">
+
+								</label>
+
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<p><span><input type="checkbox"></span> I agree to the terms of services</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<button type="submit" id="signinKor"  class="signin-btn">Sign up</button>
+							</div>
+						</div>
+						<hr>
+
+						<p>Do you have an account?<a href="#">Sign in</a></p>
+
+					</form>
+
+				</div>
+
+
+      <script>
+
+          //document.querySelector('.signin-btn').onclick = function()
+		  var signin= document.querySelector('#signinKor');
+		   function check()
+		  { 
+		    var pass = document.querySelector('.pass').value;
+			 var cpass = document.querySelector('.cpass').value;
+			 
+			 if (pass=="")
+			 {
+			 alert("Field cannot be empty");
+			 return false
+			 
+			 }
+			 else if(pass!=cpass)
+			 {
+			 alert("Password didn't match try again");
+			 return false
+              
+            }
+          else if(pass==cpass)
+			 {
+			 alert("Password matched");		
+                return true			 
+			}
+      else
+	  {
+	  alert("pass");
+	  }
+ }
+ </script>
+</body>
+
+</html>
